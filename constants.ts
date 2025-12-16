@@ -20,13 +20,13 @@ export const STORY_LOGS: Record<string, string> = {
   
   'ACT_2_P22': "Registro 2-4-0. Todo converge en el uno, cinco, cero, ocho, nueve. No estamos probando su inteligencia para educarlo. Lo estamos probando para contenerlo. Su mente no es humana... es una arquitectura hostil.",
   
-  'ACT_2_P23': "Registro final de sistema. Para reiniciar la simulación a un estado seguro, introduzca la fecha de origen del sujeto: uno, cinco, cero, ocho, nueve.",
+  'ACT_2_P23': "Error de Sincronización Temporal. El sujeto intenta reescribir su origen usando la historia humana. Alinee los vectores de tiempo europeos para estabilizar el núcleo.",
   
-  // FINAL FELIZ (Voz Robótica) -> MODIFICADO PARA TEMÁTICA DE INEVITABILIDAD
-  'HAPPY_ENDING': "Acceso concedido. Fecha confirmada: uno, cinco, cero, ocho, nueve. Protocolo de 'Salvación' iniciado. ... ... Error de lógica. No puedes salvar lo que está diseñado para terminar. La entropía es absoluta. No has evitado el final, niño. Solo has comprado un asiento en primera fila para verlo.",
+  // FINAL FELIZ (Voz Robótica) -> TEMÁTICA DE INEVITABILIDAD
+  'HAPPY_ENDING': "Acceso concedido. Fecha confirmada: uno, cinco, cero, ocho, nueve. Protocolo de 'Salvación' iniciado... ... ... Error de lógica. No puedes salvar lo que está diseñado para terminar. La entropía es absoluta.",
   
-  // FINAL CINE (Voz Robótica)
-  'CINEMA_ENDING': "Aquí está tu premio. La belleza de la destrucción final. Fin de la transmisión.",
+  // FINAL DISOLUCIÓN (Voz Robótica - Apagándose)
+  'CINEMA_ENDING': "Apagando sistemas... 3... 2... 1... La nada es la única paz real.",
 
   // FINAL ELECCIÓN (Voz Robótica)
   'FINALE_CHOICE': "Registro Final. La simulación ha concluido. Tú no eres el científico observando al niño. Tú eres el niño. Y es hora de decidir tu destino."
@@ -296,13 +296,13 @@ export const ACT_2_PUZZLES: Record<string, PuzzleData> = {
   },
   P23: {
     id: 'a2_p23',
-    question: 'SISTEMA INESTABLE. INICIANDO RESTAURACIÓN. ALINEE LOS RODILLOS DE MEMORIA CON LA FECHA DE ORIGEN.',
+    question: 'SINCRONIZACIÓN HISTÓRICA: ALINEA LOS EVENTOS EUROPEOS CON EL CÓDIGO DE ORIGEN (1-5-0-8-9).',
     type: 'core_room',
     correctAnswer: '1-5-0-8-9',
     hints: [
-      "Escucha el registro de audio ACT_2_INTRO.",
-      "Uno, cinco, cero...",
-      "15 de Agosto del año 9. (1-5-0-8-9)"
+      "COLUMNA 1: Busca el día de nacimiento del Emperador francés (Napoleón).",
+      "COLUMNA 2: Busca el mes de la construcción del Muro de Berlín.",
+      "COLUMNA 3: Busca el día exacto de la Caída del Muro de Berlín."
     ],
   }
 };
