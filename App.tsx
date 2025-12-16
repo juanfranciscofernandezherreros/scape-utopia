@@ -891,6 +891,7 @@ const App: React.FC = () => {
      const puzzle = ACT_2_PUZZLES.P23;
      
      const cycleNumber = (index: number) => {
+         if (gameState.hasAudio) Audio.playClickSound();
          let chars = '0123456789';
          setLockValues(prev => {
              const newVal = [...prev];
@@ -913,8 +914,8 @@ const App: React.FC = () => {
              <div className="absolute bottom-4 w-full text-center text-red-900/50 animate-pulse tracking-[1em] text-xs">SERVER_FARM_ALPHA // CORE_ACCESS</div>
          </div>
 
-         {/* -- MIDDLE: The Server Banks -- */}
-         <div className="flex-1 flex relative bg-[#080808] perspective-1000 overflow-hidden items-end justify-center pb-12 gap-2 md:gap-6 z-10 px-4">
+         {/* -- MIDDLE: The Server Banks (RODILLOS DE DATOS) -- */}
+         <div className="flex-1 flex relative bg-[#080808] perspective-1000 overflow-hidden items-end justify-center pb-12 gap-2 md:gap-4 z-10 px-4">
              {/* Background Void */}
              <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0505] to-[#1a0505]"></div>
              <div className="absolute top-10 left-0 w-full text-center z-20">
@@ -922,28 +923,32 @@ const App: React.FC = () => {
                  <p className="text-xs text-red-800 font-mono">MANUAL_OVERRIDE_REQUIRED</p>
              </div>
 
-             {/* The 5 Monoliths (Interactive) */}
+             {/* The 5 Data Rollers (Interactive) */}
              {lockValues.map((val, i) => (
                  <div 
                     key={i} 
                     onClick={() => cycleNumber(i)}
-                    className="relative w-12 md:w-24 h-[40vh] md:h-[50vh] bg-gray-900 border-x border-gray-700 shadow-[0_0_20px_rgba(0,0,0,0.8)] cursor-pointer hover:bg-gray-800 transition-all group flex flex-col justify-between py-4"
+                    className="relative w-16 md:w-32 h-[50vh] bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-x border-gray-700 shadow-[0_0_30px_rgba(0,0,0,0.8)] cursor-pointer hover:bg-gray-800 transition-all group flex flex-col justify-between py-8 rounded-lg transform hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(200,0,0,0.2)]"
                  >
+                    {/* Roller Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"></div>
+
                     {/* Server Lights Top */}
-                    <div className="flex justify-center gap-1">
-                        <div className="w-1 h-1 bg-red-500 rounded-full animate-ping"></div>
-                        <div className="w-1 h-1 bg-red-900 rounded-full"></div>
+                    <div className="flex justify-center gap-2 mb-4">
+                        <div className="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+                        <div className="w-2 h-2 bg-red-900 rounded-full"></div>
                     </div>
                     
                     {/* The Number Display */}
-                    <div className="flex-1 flex items-center justify-center">
-                         <span className="text-4xl md:text-7xl font-bold text-red-600 group-hover:text-red-400 group-hover:scale-110 transition-transform drop-shadow-[0_0_10px_rgba(255,0,0,0.5)]">
+                    <div className="flex-1 flex items-center justify-center overflow-hidden relative">
+                         <div className="absolute w-full h-full bg-[linear-gradient(transparent_45%,rgba(255,0,0,0.1)_50%,transparent_55%)] bg-[size:100%_4px]"></div>
+                         <span className="text-6xl md:text-8xl font-bold text-red-600 group-hover:text-red-400 group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(255,0,0,0.6)] font-mono">
                              {val}
                          </span>
                     </div>
 
                     {/* Server Grate Bottom */}
-                    <div className="h-8 w-full bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqheqGw7i8QAyeBwAAwAAAABJRU5ErkJggg==')] opacity-50"></div>
+                    <div className="h-12 w-full bg-[repeating-linear-gradient(45deg,transparent,transparent_5px,#111_5px,#111_10px)] opacity-50 border-t border-gray-700"></div>
                  </div>
              ))}
          </div>

@@ -448,3 +448,23 @@ export const playGlitchBurst = () => {
     gain.connect(masterGain);
     noise.start();
 };
+
+export const playClickSound = () => {
+  if (!audioCtx || !masterGain) return;
+  const t = audioCtx.currentTime;
+  
+  // Short high pitched blip for UI interaction
+  const osc = audioCtx.createOscillator();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(800, t);
+  osc.frequency.exponentialRampToValueAtTime(1200, t + 0.05);
+  
+  const gain = audioCtx.createGain();
+  gain.gain.setValueAtTime(0.1, t);
+  gain.gain.exponentialRampToValueAtTime(0.01, t + 0.05);
+  
+  osc.connect(gain);
+  gain.connect(masterGain);
+  osc.start();
+  osc.stop(t + 0.05);
+};

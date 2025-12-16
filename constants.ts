@@ -7,18 +7,23 @@ export const STORY_LOGS: Record<string, string> = {
   'INTRO': "Hola. Soy la doctora Vance. Gracias por traerlo hoy. Sé que han sido meses difíciles. El problema que vamos a tratar es el 'Aislamiento Cognitivo' de su hijo. Él vive atrapado en su propia cabeza, creando laberintos lógicos para evitar sentir emociones reales. Hemos creado este 'juego' para conectar con él. Si completa las pruebas, demostrará que puede volver a la realidad. Queremos que se divierta... y que vuelva con nosotros. Asegúrese de que llegue al final.",
 
   // ACTO 1 VICTORIA - LA TERAPEUTA (Voz Dulce)
-  'ACT_1_WIN': "¡Lo has conseguido! Eres increíble. Sabía que detrás de ese silencio había un niño brillante. Has completado todo el protocolo. Estoy muy orgullosa. Ahora, deja que preparemos tu recompensa, te va a encantar... Espera... ¿qué es esa luz en el monitor? ¿Por qué parpadea así? ... Oh no.",
+  'ACT_1_WIN': "¡Lo has conseguido! Eres increíble. Sabía que detrás de ese silencio había un niño brillante. Has completado todo el protocolo. Estoy muy orgullosa. Ahora, deja que preparemos tu recompensa, te va a encantar... Espera... ¿qué es esa luz en el monitor? ¿Por qué parpadea así? ... uno... cinco... cero... ocho... nueve... Oh no.",
 
   // ACTO 2 - SISTEMA (Voz Robótica)
   'ACT_2_INTRO': "Registro 0-0-1. Sujeto 7. Fecha de nacimiento: uno, cinco, cero, ocho, nueve. El niño nació en silencio. Los doctores celebraron su calma. No sabían que no era paz... era cálculo.",
-  'ACT_2_P15': "Registro 0-1-4. A los tres años, retiramos los lápices de colores. El sujeto solo dibujaba estática y ceros. Decía que los colores le dolían en los ojos.",
-  'ACT_2_P17': "Registro 0-2-9. Intentamos la socialización. Fracaso absoluto. Los otros niños lloraban al estar cerca de él. Decían que podían oír un zumbido dentro de sus cabezas.",
-  'ACT_2_P19': "Registro 1-0-5. Encontramos al sujeto mirando una pared blanca durante dieciocho horas. Cuando le preguntamos qué veía, respondió: 'El código fuente del mundo'.",
-  'ACT_2_P22': "Registro 2-4-0. No estamos probando su inteligencia para educarlo. Lo estamos probando para contenerlo. Su mente no es humana... es una arquitectura hostil.",
-  'ACT_2_P23': "Registro final de sistema. Para reiniciar la simulación a un estado seguro, introduzca la fecha de origen del sujeto.",
+  
+  'ACT_2_P15': "Registro 0-1-4. Fecha base: uno, cinco, cero, ocho, nueve. A los tres años, retiramos los lápices de colores. El sujeto solo dibujaba estática y ceros. Decía que los colores le dolían en los ojos.",
+  
+  'ACT_2_P17': "Registro 0-2-9. Anomalía temporal vinculada al uno, cinco, cero, ocho, nueve. Intentamos la socialización. Fracaso absoluto. Los otros niños lloraban al estar cerca de él. Decían que podían oír un zumbido dentro de sus cabezas.",
+  
+  'ACT_2_P19': "Registro 1-0-5. El origen de la señal es constante: uno, cinco, cero, ocho, nueve. Encontramos al sujeto mirando una pared blanca durante dieciocho horas. Cuando le preguntamos qué veía, respondió: 'El código fuente del mundo'.",
+  
+  'ACT_2_P22': "Registro 2-4-0. Todo converge en el uno, cinco, cero, ocho, nueve. No estamos probando su inteligencia para educarlo. Lo estamos probando para contenerlo. Su mente no es humana... es una arquitectura hostil.",
+  
+  'ACT_2_P23': "Registro final de sistema. Para reiniciar la simulación a un estado seguro, introduzca la fecha de origen del sujeto: uno, cinco, cero, ocho, nueve.",
   
   // FINAL FELIZ (Voz Robótica) -> MODIFICADO PARA TEMÁTICA DE INEVITABILIDAD
-  'HAPPY_ENDING': "Acceso concedido. Protocolo de 'Salvación' iniciado. ... ... Error de lógica. No puedes salvar lo que está diseñado para terminar. La entropía es absoluta. No has evitado el final, niño. Solo has comprado un asiento en primera fila para verlo.",
+  'HAPPY_ENDING': "Acceso concedido. Fecha confirmada: uno, cinco, cero, ocho, nueve. Protocolo de 'Salvación' iniciado. ... ... Error de lógica. No puedes salvar lo que está diseñado para terminar. La entropía es absoluta. No has evitado el final, niño. Solo has comprado un asiento en primera fila para verlo.",
   
   // FINAL CINE (Voz Robótica)
   'CINEMA_ENDING': "Aquí está tu premio. La belleza de la destrucción final. Fin de la transmisión.",
@@ -291,7 +296,7 @@ export const ACT_2_PUZZLES: Record<string, PuzzleData> = {
   },
   P23: {
     id: 'a2_p23',
-    question: 'SISTEMA INESTABLE. ACCESO AL NÚCLEO DE MEMORIA. ALINEE LOS BANCOS DE SERVIDORES CON LA FECHA DE ORIGEN.',
+    question: 'SISTEMA INESTABLE. INICIANDO RESTAURACIÓN. ALINEE LOS RODILLOS DE MEMORIA CON LA FECHA DE ORIGEN.',
     type: 'core_room',
     correctAnswer: '1-5-0-8-9',
     hints: [
